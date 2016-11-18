@@ -6,9 +6,9 @@
   "author": "Meetup",
   "engine": "node >=6.5.0",
   "scripts": {
-    "build": "babel src --out-dir lib --ignore test.js, test.jsx",
+    "build": "babel src --out-dir lib",
     "lint": "npm run lint:base -- --fix",
-    "lint:base": "eslint . --ext .js,.jsx",
+    "lint:base": "eslint . --ext .js",
     "modules:clean": "rm -rf node_modules",
     "prepublish": "npm run build"
   },
@@ -25,11 +25,6 @@
     "babel-core": "6.18.0",
     "babel-preset-es2015": "6.18.0",
     "babel-preset-stage-2": "6.18.0",
-    "babel-register": "6.18.0",
     "eslint": "3.9.1"
-  },
-  "devDependencies": {
-    "babel-loader": "6.2.4",
-    "eslint-loader": "1.5.0"
   }
 }
