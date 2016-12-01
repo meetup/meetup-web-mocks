@@ -1,7 +1,8 @@
 import { Observable } from 'rxjs';
 import {
 	MOCK_GROUP,
-	MOCK_EVENT
+	MOCK_EVENT,
+	MOCK_GROUP_COMMUNICATION
 } from './api';
 
 export const MOCK_APP_STATE = {
