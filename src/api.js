@@ -135,7 +135,7 @@ export const MOCK_GROUP_COMMUNICATION = {
 };
 
 
-export const MOCK_GROUP_COMMENTS = {  
+export const MOCK_GROUP_COMMUNICATION_COMMENTS = {  
    "0":{
       "id":1234,
       "comment":"comment 1",
