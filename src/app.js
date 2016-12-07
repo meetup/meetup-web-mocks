@@ -35,10 +35,10 @@ export const MOCK_APP_STATE = {
 			value: MOCK_GROUP_COMMUNICATION_COMMENTS
 		}
 	},
-	auth: {
-		oauth_token: 'foo'
+	config: {
+		apiUrl: 'http://fake.api.meetup.com',
+		csrf: '1234_fake_csrf',
 	},
-	config: {},
 	routing: {
 		locationBeforeTransitions: {
 			pathname: '/foo',
