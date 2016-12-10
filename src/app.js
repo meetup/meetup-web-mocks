@@ -5,7 +5,7 @@ import {
 } from './api';
 import {
 	MOCK_COMM_APP_STATE
-} from './group/communication/api';
+} from './group/communication/app';
 
 
 export const MOCK_APP_STATE = {
