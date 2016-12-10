@@ -2,9 +2,11 @@ import { Observable } from 'rxjs';
 import {
 	MOCK_GROUP,
 	MOCK_EVENT,
-	MOCK_GROUP_COMMUNICATION,
-	MOCK_GROUP_COMMUNICATION_COMMENTS
 } from './api';
+import {
+	MOCK_COMM_APP_STATE
+} from './group/communication/api';
+
 
 export const MOCK_APP_STATE = {
 	app: {
@@ -26,14 +28,7 @@ export const MOCK_APP_STATE = {
 				{ ...MOCK_EVENT, ...({ id: 4567 }) }
 			]
 		},
-		groupCommunication: {
-			type: 'groupCommunication',
-			value: MOCK_GROUP_COMMUNICATION
-		},
-		groupCommunicationComments: {
-			type: 'groupCommunicationComments',
-			value: MOCK_GROUP_COMMUNICATION_COMMENTS
-		}
+		...MOCK_COMM_APP_STATE
 	},
 	auth: {
 		oauth_token: 'foo'
