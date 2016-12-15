@@ -146,6 +146,15 @@ export const MOCK_POST_ACTION = {
 	}
 };
 
+export const MOCK_DELETE_ACTION = {
+	type: 'DELETE_DUMMY',
+	payload: {
+		query: {},
+		onSuccess: payload => ({ type: 'MOCK_SUCCESS', payload }),
+		onError: err => ({ type: 'MOCK_ERROR', payload: err, error: true }),
+	}
+};
+
 // Arbitrary string response payload from server render
 export const MOCK_RENDER_RESULT = '<html><body><h1>Hello world</h1></body></html>';
 
