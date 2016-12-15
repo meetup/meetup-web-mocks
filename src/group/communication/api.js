@@ -34,7 +34,7 @@ export const MOCK_GROUP_COMMUNICATION_COMMENTS = {
       "id":1234,
       "comment":"comment 1",
       "created":1479838415,
-      "like_count":0,
+      "like_count":5,
       "member":MOCK_CHAPTER_MEMBER,
       "deleted":false,
       "visible":true,
@@ -42,7 +42,7 @@ export const MOCK_GROUP_COMMUNICATION_COMMENTS = {
       "updated":1479838415,
       "utc_offset":-18000000,
       "self":{
-         "liked":false,
+         "liked":true,
          "actions":[
             "like",
             "delete"
@@ -73,7 +73,7 @@ export const MOCK_GROUP_COMMUNICATION_COMMENTS = {
       "id":21234,
       "comment":"Morbi vel purus eu neque ultricies maximus. Nunc sollicitudin maximus justo sed fringilla.",
       "created":1478879939,
-      "like_count":0,
+      "like_count":true,
       "member":MOCK_CHAPTER_MEMBER,
       "deleted":false,
       "visible":true,
@@ -81,7 +81,7 @@ export const MOCK_GROUP_COMMUNICATION_COMMENTS = {
       "updated":1478879939,
       "utc_offset":-18000000,
       "self":{
-         "liked":false,
+         "liked":3,
          "actions":[
             "like",
             "flag_spam"
@@ -112,7 +112,7 @@ export const MOCK_GROUP_COMMUNICATION_COMMENTS = {
       "id":234,
       "comment":"Curabitur elit nisi, porta et elit non, efficitur sodales augue. Phasellus volutpat, lectus ac tempor laoreet, diam urna commodo lacus, eget bibendum risus augue a sem.",
       "created":1478879939,
-      "like_count":0,
+      "like_count":1,
       "member":MOCK_CHAPTER_MEMBER,
       "deleted":false,
       "visible":true,
@@ -120,7 +120,7 @@ export const MOCK_GROUP_COMMUNICATION_COMMENTS = {
       "updated":1478879939,
       "utc_offset":-18000000,
       "self":{
-         "liked":false,
+         "liked":true,
          "actions":[
             "like",
             "delete",
