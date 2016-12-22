@@ -46,68 +46,68 @@ export const MOCK_GROUP = {
 
 export const MOCK_CHAPTER_MEMBER = {
 	id:82159492,
-	name:"Grayson Cheese",
-	status:"active",
+	name:'Grayson Cheese',
+	status:'active',
 	joined:1361806241000,
-	city:"new york",
-	country:"us",
+	city:'new york',
+	country:'us',
 	lat:40,
 	lon:-72,
 
 	photo: {
 		photo_link: 'http://placekitten.com/g/400/400',
 	},
-	group_profile: {  
-	  status:"active",
-	  visited:1396285003000,
-	  created:1395768492000,
-	  updated:1478880527000,
-	  group: MOCK_GROUP,
-	  intro: "cheese is the best!",
+	group_profile: {
+		status:'active',
+		visited:1396285003000,
+		created:1395768492000,
+		updated:1478880527000,
+		group: MOCK_GROUP,
+		intro: 'cheese is the best!',
 	}
 };
 export const MOCK_CHAPTER_MEMBER_2 = {
 	id:234322,
-	name:"Chesterton Gordidason",
-	status:"active",
+	name:'Chesterton Gordidason',
+	status:'active',
 	joined:1361806241020,
-	city:"new york",
-	country:"us",
+	city:'new york',
+	country:'us',
 	lat:40,
 	lon:-72,
 
 	photo: {
 		photo_link: 'http://placekitten.com/g/400/400',
 	},
-	group_profile: {  
-	  status:"active",
-	  visited:1396285003000,
-	  created:1395768492000,
-	  updated:1478880527000,
-	  group: MOCK_GROUP,
-	  intro: "cheese is the best!",
+	group_profile: {
+		status:'active',
+		visited:1396285003000,
+		created:1395768492000,
+		updated:1478880527000,
+		group: MOCK_GROUP,
+		intro: 'cheese is the best!',
 	}
 };
 export const MOCK_CHAPTER_MEMBER_3 = {
 	id:23222,
-	name:"Simon Cheddar",
-	status:"active",
+	name:'Simon Cheddar',
+	status:'active',
 	joined:1361806541020,
-	city:"new york",
-	country:"us",
+	city:'new york',
+	country:'us',
 	lat:40,
 	lon:-72,
 
 	photo: {
 		photo_link: 'http://placekitten.com/g/400/400',
 	},
-	group_profile: {  
-	  status:"active",
-	  visited:1396285003000,
-	  created:1395768492000,
-	  updated:1478880527000,
-	  group: MOCK_GROUP,
-	  intro: "cheese is the best!",
+	group_profile: {
+		status:'active',
+		visited:1396285003000,
+		created:1395768492000,
+		updated:1478880527000,
+		group: MOCK_GROUP,
+		intro: 'cheese is the best!',
 	}
 };
 
