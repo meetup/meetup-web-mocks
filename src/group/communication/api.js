@@ -43,7 +43,8 @@ export const MOCK_COMMENT ={
 		"liked":false,
 		"actions":[
 			"like",
-			"delete"
+			"delete",
+			"flag_spam"
 		]
 	}
 };
