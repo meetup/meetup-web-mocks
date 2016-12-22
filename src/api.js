@@ -9,11 +9,6 @@ export const MOCK_MEMBER = {
 export const MOCK_SELF = { ...MOCK_MEMBER, ...({ lang: 'en_US' }) };
 export const MOCK_SELF_FR = { ...MOCK_MEMBER, ...({ lang: 'fr_FR' }) };
 
-export const MOCK_PAYLOAD = {
-	queries: [],
-	responses: []
-};
-
 export const MOCK_DUOTONES = [
 	['a', 'b']
 ];

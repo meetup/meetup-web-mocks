@@ -70,6 +70,11 @@ export const MOCK_API_RESULT = [{
 	value: MOCK_APP_STATE.app.group.value
 }];
 
+export const MOCK_FETCH_API_RESPONSE = {
+	queries: [],
+	responses: []
+};
+
 export const MOCK_OAUTH_COOKIES = {
 	oauth_token: '1234',
 	refresh_token: 'asdf',
