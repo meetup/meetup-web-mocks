@@ -10,7 +10,8 @@
     "lint": "npm run lint:base -- --fix",
     "lint:base": "eslint . --ext .js, .jsx",
     "modules:clean": "rm -rf node_modules",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "test": "npm run lint:base"
   },
   "repository": {
     "type": "git",
