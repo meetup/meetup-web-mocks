@@ -6,7 +6,7 @@ import {
 } from '../../api';
 
 export const MOCK_GROUP_COMMUNICATION = {
-	"id":1342,
+	"id":"1342",
 	"description":"Some Mock Conversation",
 	"hashtag":"#ideas",
 	"group":MOCK_GROUP,
