@@ -36,7 +36,6 @@ export const MOCK_COMMENT ={
 	member:MOCK_CHAPTER_MEMBER,
 	deleted:false,
 	visible:true,
-	created:1479838415,
 	updated:1479838415,
 	utc_offset:-18000000,
 	self:{
