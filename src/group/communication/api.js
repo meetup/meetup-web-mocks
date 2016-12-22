@@ -38,7 +38,6 @@ export const MOCK_GROUP_COMMUNICATION_COMMENTS = {
 		member:MOCK_CHAPTER_MEMBER,
 		deleted:false,
 		visible:true,
-		created:1479838415,
 		updated:1479838415,
 		utc_offset:-18000000,
 		self:{
@@ -57,7 +56,6 @@ export const MOCK_GROUP_COMMUNICATION_COMMENTS = {
 		member:MOCK_CHAPTER_MEMBER,
 		deleted:false,
 		visible:true,
-		created:1478879940,
 		updated:1478879940,
 		utc_offset:-18000000,
 		self:{
@@ -77,7 +75,6 @@ export const MOCK_GROUP_COMMUNICATION_COMMENTS = {
 		member:MOCK_CHAPTER_MEMBER,
 		deleted:false,
 		visible:true,
-		created:1478879939,
 		updated:1478879939,
 		utc_offset:-18000000,
 		self:{
@@ -96,7 +93,6 @@ export const MOCK_GROUP_COMMUNICATION_COMMENTS = {
 		member:MOCK_CHAPTER_MEMBER,
 		deleted:false,
 		visible:true,
-		created:1478879939,
 		updated:1478879939,
 		utc_offset:-18000000,
 		self:{
@@ -116,7 +112,6 @@ export const MOCK_GROUP_COMMUNICATION_COMMENTS = {
 		member:MOCK_CHAPTER_MEMBER,
 		deleted:false,
 		visible:true,
-		created:1478879939,
 		updated:1478879939,
 		utc_offset:-18000000,
 		self:{
