@@ -118,7 +118,7 @@ export const MOCK_MEANINGLESS_ACTION = {
 export const mockQuery = ({ location, params }) => {
 	return {
 		type: 'group',
-		endpoint: params.urlname || 'foo',
+		endpoint: (params || {}).urlname || 'foo',
 		params: params,
 		ref: 'group'
 	};
