@@ -146,7 +146,11 @@ export const MOCK_LOGIN_RESPONSE = {
 export const MOCK_POST_ACTION = {
 	type: 'POST_DUMMY',
 	payload: {
-		query: {},
+		query: {
+			endpoint: 'mypost',
+			ref: 'postiepost',
+			type: 'mcposterson',
+		},
 		onSuccess: payload => ({ type: 'MOCK_SUCCESS', payload }),
 		onError: err => ({ type: 'MOCK_ERROR', payload: err, error: true }),
 	}
@@ -155,7 +159,11 @@ export const MOCK_POST_ACTION = {
 export const MOCK_DELETE_ACTION = {
 	type: 'DELETE_DUMMY',
 	payload: {
-		query: {},
+		query: {
+			endpoint: 'mydelete',
+			ref: 'deleted',
+			type: 'dellllleeeeted',
+		},
 		onSuccess: payload => ({ type: 'MOCK_SUCCESS', payload }),
 		onError: err => ({ type: 'MOCK_ERROR', payload: err, error: true }),
 	}
