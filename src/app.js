@@ -41,25 +41,6 @@ export const MOCK_APP_STATE = {
 	},
 };
 
-export const MOCK_ROUTES = [
-	{
-		path: '/noQuery',
-		component: () => {},
-	},
-	{
-		path: '/',
-		component: () => {},
-		query: () => {},
-		childRoutes: [
-			{
-				path: 'foo',
-				component: () => {},
-				query: () => {}
-			}
-		]
-	},
-];
-
 export const MOCK_API_PROBLEM = {
 	problem: 'There was an internal problem in the API'
 };
@@ -209,5 +190,24 @@ const mock_valid_config = {
 };
 mock_valid_config.API_SERVER_ROOT_URL = `${mock_valid_config.API_PROTOCOL}://${mock_valid_config.API_HOST}`;
 export const MOCK_VALID_CONFIG = mock_valid_config;
+
+export const MOCK_ROUTES = [
+	{
+		path: '/noQuery',
+		component: () => {},
+	},
+	{
+		path: '/',
+		component: () => {},
+		query: () => mockQuery({}),
+		childRoutes: [
+			{
+				path: 'foo',
+				component: () => {},
+				query: () => mockQuery({})
+			}
+		]
+	},
+];
 
 
