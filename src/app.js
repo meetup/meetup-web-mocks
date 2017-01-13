@@ -205,7 +205,12 @@ export const MOCK_ROUTES = [
 				path: 'foo',
 				component: () => {},
 				query: () => mockQuery({})
-			}
+			},
+			{
+				path: 'nullQuery',
+				component: () => {},
+				query: () => null,
+			},
 		]
 	},
 ];
