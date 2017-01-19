@@ -1,6 +1,6 @@
 {
   "name": "meetup-web-mocks",
-  "version": "0.1.0",
+  "version": "0.1.45",
   "license": "UNLICENSED",
   "description": "Meetup Web Mocks",
   "author": "Meetup",
@@ -21,7 +21,7 @@
     "url": "https://github.com/meetup/meetup-web-mocks/issues"
   },
   "homepage": "https://github.com/meetup/meetup-web-mocks#readme",
-  "peerDependencies":{
+  "peerDependencies": {
     "react": "^15.3.2",
     "react-addons-test-utils": "^15.3.2",
     "react-dom": "^15.3.2",
