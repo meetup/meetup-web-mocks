@@ -111,6 +111,15 @@ export const MOCK_CHAPTER_MEMBER_3 = {
 	}
 };
 
+export const MOCK_VENUE = {
+	address_1: 'address 1',
+	address_2: 'address 2',
+	address_3: 'address 3',
+	city: 'city name',
+	state: 'NY',
+	zip: '00000',
+};
+
 const oneMonthAgo = new Date();
 oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
 const oneMonthFuture = new Date();
@@ -140,6 +149,17 @@ export const MOCK_EVENT = {
 		member: { ...MOCK_MEMBER, ...({ id: 899828 }) },
 		updated: 1462833255610
 	}],
+	venue: MOCK_VENUE,
+	how_to_find_us: 'how to find us',
+	event_hosts: [
+		MOCK_CHAPTER_MEMBER,
+		MOCK_CHAPTER_MEMBER_2,
+		MOCK_CHAPTER_MEMBER_3
+	],
+	fee: {
+		amount: 10,
+		currency: 'USD'
+	},
 	rsvpable: true,
 	group: MOCK_GROUP,
 	self: {
