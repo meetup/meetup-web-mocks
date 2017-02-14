@@ -174,6 +174,7 @@ export const MOCK_EVENT = {
 	yes_rsvp_count: 23
 };
 
+// Mock category sourced from https://www.meetup.com/meetup_api/docs/find/topic_categories/
 export const MOCK_CATEGORY = {
 	id: 552,
 	shortname: 'movements',
