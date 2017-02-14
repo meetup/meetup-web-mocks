@@ -28,6 +28,7 @@ export const MOCK_APP_STATE = {
 				{ ...MOCK_EVENT, ...({ id: 4567 }) }
 			]
 		},
+		event: MOCK_EVENT,
 		...MOCK_COMM_APP_STATE
 	},
 	config: {
