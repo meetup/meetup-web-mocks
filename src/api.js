@@ -173,3 +173,20 @@ export const MOCK_EVENT = {
 	visibility: 'public',
 	yes_rsvp_count: 23
 };
+
+// Mock category sourced from https://www.meetup.com/meetup_api/docs/find/topic_categories/
+export const MOCK_CATEGORY = {
+	id: 552,
+	shortname: 'movements',
+	name: 'Movements',
+	sort_name: 'Movements',
+	photo: {
+		id: 450131941,
+		highres_link: 'http://photos1.meetupstatic.com/photos/event/2/e/a/5/highres_450131941.jpeg',
+		photo_link: 'http://photos1.meetupstatic.com/photos/event/2/e/a/5/600_450131941.jpeg',
+		thumb_link: 'http://photos1.meetupstatic.com/photos/event/2/e/a/5/thumb_450131941.jpeg',
+		type: 'event',
+		base_url: 'http://photos1.meetupstatic.com'
+	},
+	category_ids: [4, 13]
+};
