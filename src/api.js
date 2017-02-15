@@ -190,3 +190,5 @@ export const MOCK_CATEGORY = {
 	},
 	category_ids: [4, 13]
 };
+
+export const MOCK_CATEGORIES = [MOCK_CATEGORY];
