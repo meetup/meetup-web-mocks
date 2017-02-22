@@ -174,7 +174,7 @@ export const MOCK_EVENT = {
 	yes_rsvp_count: 23
 };
 
-export const MOCK_BEST_TOPIC = {
+export const MOCK_TOPIC = {
 	id: 16645,
 	name: 'Volunteering',
 	urlkey: 'volunteering',
@@ -196,7 +196,7 @@ export const MOCK_CATEGORY = {
 		base_url: 'http://photos1.meetupstatic.com'
 	},
 	category_ids: [4, 13],
-	best_topics: [MOCK_BEST_TOPIC]
+	best_topics: [MOCK_TOPIC]
 };
 
 export const MOCK_CATEGORIES = [MOCK_CATEGORY];
