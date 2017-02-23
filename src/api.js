@@ -174,13 +174,6 @@ export const MOCK_EVENT = {
 	yes_rsvp_count: 23
 };
 
-export const MOCK_TOPIC = {
-	id: 16645,
-	name: 'Volunteering',
-	urlkey: 'volunteering',
-	lang: 'en_US'
-};
-
 // Mock category sourced from https://www.meetup.com/meetup_api/docs/find/topic_categories/
 export const MOCK_CATEGORY = {
 	id: 552,
@@ -196,7 +189,12 @@ export const MOCK_CATEGORY = {
 		base_url: 'http://photos1.meetupstatic.com'
 	},
 	category_ids: [4, 13],
-	best_topics: [MOCK_TOPIC]
+	best_topics: [{
+		id: 16645,
+		name: 'Volunteering',
+		urlkey: 'volunteering',
+		lang: 'en_US'
+	}]
 };
 
 export const MOCK_CATEGORIES = [MOCK_CATEGORY];
