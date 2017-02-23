@@ -188,7 +188,13 @@ export const MOCK_CATEGORY = {
 		type: 'event',
 		base_url: 'http://photos1.meetupstatic.com'
 	},
-	category_ids: [4, 13]
+	category_ids: [4, 13],
+	best_topics: [{
+		id: 16645,
+		name: 'Volunteering',
+		urlkey: 'volunteering',
+		lang: 'en_US'
+	}]
 };
 
 export const MOCK_CATEGORIES = [MOCK_CATEGORY];
