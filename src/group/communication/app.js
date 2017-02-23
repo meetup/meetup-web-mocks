@@ -4,6 +4,9 @@ import {
 	MOCK_GROUP_COMMUNICATION_FOLLOWERS,
 	MOCK_GROUP_COMMUNICATION_SUGGESTED_FOLLOWERS
 } from './api';
+import {
+	MOCK_COMMENTS_LIST,
+} from './../api';
 
 export const MOCK_COMM_APP_STATE = {
 	groupCommunication: {
@@ -12,7 +15,7 @@ export const MOCK_COMM_APP_STATE = {
 	},
 	groupCommunicationComments: {
 		type: 'groupCommunicationComments',
-		value: MOCK_GROUP_COMMUNICATION_COMMENTS
+		value: MOCK_COMMENTS_LIST
 	},
 	groupCommunicationFollowers: {
 		type: 'groupCommunicationFollowers',
