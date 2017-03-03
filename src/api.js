@@ -30,6 +30,7 @@ export const MOCK_GROUP = {
 		thumb_link: 'http://placekitten.com/400/300',
 	},
 	name: 'fake HQ FAFF',
+	link: 'http://example.com/fake-hq-faff',
 	who: 'Faffers',
 	members: 999,
 	photo_gradient: {
