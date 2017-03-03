@@ -24,8 +24,8 @@ export const MOCK_APP_STATE = {
 		events: {
 			type: 'event',
 			value: [
-				{ ...MOCK_EVENT, ...({ id: 3456 }) },
-				{ ...MOCK_EVENT, ...({ id: 4567 }) }
+				{ ...MOCK_EVENT, ...({ id: '3456' }) },
+				{ ...MOCK_EVENT, ...({ id: '4567' }) }
 			]
 		},
 		event: MOCK_EVENT,

@@ -224,7 +224,7 @@ oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
 const oneMonthFuture = new Date();
 oneMonthFuture.setMonth(oneMonthFuture.getMonth() + 1);
 export const MOCK_EVENT = {
-	id: 123456,
+	id: '123456',
 	comment_count: 5,
 	created: oneMonthAgo.getTime(),
 	description: `The coolest event in the world during which we will run and dance and sing
