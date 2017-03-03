@@ -19,6 +19,20 @@ export const MOCK_DUOTONE_URLS = {
 export const MOCK_GROUP = {
 	id: 1234,
 	urlname: 'fake-hq-faff',
+	organizer: {
+		id: 164510652,
+		name: 'Grayson Cheese',
+		bio: 'Org bio lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu tellus sit amet erat blandit volutpat.',
+		photo: {
+			id: 257204155,
+			highres_link: 'http://photos1.dev.meetupstatic.com/photos/member/a/c/7/b/highres_257204155.jpeg',
+			photo_link: 'http://photos1.dev.meetupstatic.com/photos/member/a/c/7/b/member_257204155.jpeg',
+			thumb_link: 'http://photos1.dev.meetupstatic.com/photos/member/a/c/7/b/thumb_257204155.jpeg',
+			type: 'member',
+			base_url: 'http://photos1.dev.meetupstatic.com'
+		}
+	},
+	plain_text_description: 'Plain text description lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu tellus sit amet erat blandit volutpat. Suspendisse tincidunt pulvinar vehicula. Mauris eget tristique mi. Ut tincidunt, ante eget aliquet eleifend, ligula lorem elementum felis, quis consectetur sapien justo ut eros. Maecenas tempus lacus metus, eu pretium massa convallis vitae. Donec id fringilla orci. Nunc eget elementum massa. Pellentesque pulvinar ipsum porta finibus laoreet. Donec pharetra quis nunc in auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Nulla eget nibh quis nisi commodo accumsan. Donec sed suscipit justo. Aliquam erat volutpat. Nunc a nulla massa. Curabitur at elit eu neque congue fermentum',
 	key_photo: {
 		id: 1234,
 		photo_link: 'http://placekitten.com/400/300',
