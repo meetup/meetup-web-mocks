@@ -31,9 +31,9 @@ export const MOCK_NOTIFICATION_UNREAD = {
 		}
 	},
 	self: {
-		'action': 'instant_rsvp'
+		action: 'instant_rsvp'
 	}
-}
+};
 
 // Read notification
 export const MOCK_NOTIFICATION_READ = {
@@ -71,4 +71,4 @@ export const MOCK_NOTIFICATION_READ = {
 	self: {
 		action: 'instant_rsvp'
 	}
-}
+};
