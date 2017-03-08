@@ -36,7 +36,7 @@ export const MOCK_NOTIFICATION_UNREAD = {
 }
 
 // Read notification
-export MOCK_NOTIFICATION_READ = {
+export const MOCK_NOTIFICATION_READ = {
 	kind: 'event_reminder',
 	category: 'event',
 	id: '420566373152915456',
