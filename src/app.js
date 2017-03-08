@@ -6,7 +6,10 @@ import {
 import {
 	MOCK_COMM_APP_STATE
 } from './group/communication/app';
-
+import {
+	MOCK_NOTIFICATION_UNREAD,
+	MOCK_NOTIFICATION_READ
+} from './notifications/api';
 
 export const MOCK_APP_STATE = {
 	app: {
@@ -31,6 +34,13 @@ export const MOCK_APP_STATE = {
 		event: {
 			type: 'event',
 			value: MOCK_EVENT,
+		},
+		notifications: {
+			type: 'notifications',
+			value: [
+				MOCK_NOTIFICATION_UNREAD,
+				MOCK_NOTIFICATION_READ
+			]
 		},
 		...MOCK_COMM_APP_STATE
 	},
