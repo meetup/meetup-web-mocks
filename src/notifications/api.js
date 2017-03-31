@@ -72,7 +72,7 @@ export const MOCK_NOTIFICATION_COMMENT = {
 	"kind": "mug_comm_comment",
 	"category": "comment",
 	"id": "426750535552851968",
-	"text": "will howard and 2 others commented on "Test delete actions"",
+	"text": 'will howard and 2 others commented on "Test delete actions"',
 	"link": "https://www.meetup.com/hq-faff/communications/17056/",
 	"target": {
 		"type": "external_url",
