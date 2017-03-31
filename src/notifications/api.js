@@ -23,13 +23,13 @@ export const MOCK_NOTIFICATION_GROUP = {
 	photo_type: 'event',
 	setting: {
 		email: {
-			'name': 'new_group_alert'
+			name: 'new_group_alert'
 		}
 	},
 	self: {
 		action: 'instant_join'
 	}
-}
+};
 
 export const MOCK_NOTIFICATION_EVENT = {
 	kind: 'event_announce',
@@ -66,7 +66,7 @@ export const MOCK_NOTIFICATION_EVENT = {
 	self: {
 		action: 'instant_rsvp'
 	}
-}
+};
 
 export const MOCK_NOTIFICATION_COMMENT = {
 	kind: 'mug_comm_comment',
@@ -99,7 +99,7 @@ export const MOCK_NOTIFICATION_COMMENT = {
 			name: 'event_comments'
 		}
 	}
-}
+};
 
 export const MOCK_NOTIFICATIONS_LIST = [
 	MOCK_NOTIFICATION_GROUP,
@@ -118,4 +118,4 @@ export const MOCK_NOTIFICATIONS_LIST = [
 	{ MOCK_NOTIFICATION_COMMENT, read: true },
 	{ MOCK_NOTIFICATION_EVENT, read: true },
 	{ MOCK_NOTIFICATION_GROUP, read: true }
-]
+];
