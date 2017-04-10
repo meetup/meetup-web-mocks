@@ -27,7 +27,7 @@ addons:
       - g++-4.8
 
 before_install:
-  - openssl aes-256-cbc -K $encrypted_e09404c5d59a_key -iv $encrypted_e09404c5d59a_iv -in .travis/github_deploy_key.enc -out github_deploy_key -d
+  - openssl aes-256-cbc -K $encrypted_e09404c5d59a_key -iv $encrypted_e09404c5d59a_iv -in '.travis/github_deploy_key.enc' -out github_deploy_key -d
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
 
 after_success:
