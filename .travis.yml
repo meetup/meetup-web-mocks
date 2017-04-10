@@ -1,11 +1,15 @@
 sudo: required
 language: node_js
 node_js:
-  - "6.1"
+  - "7.8"
+cache:
+  yarn: true
+  directories:
+    - node_modules
 
-branches:  # pushes only get built for master
-  only:
-    - master
+branches:  # exclude tags
+  except:
+    - /^\d+$/
 
 env:
   global:
@@ -13,6 +17,7 @@ env:
     - CXX=g++-4.8
     # build number used by blt pipeline
     - CI_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER
+    - secure : "PwdqejbAT+2GcRDbZEgFayjV24iQvMqNDFhrVS4mc6LF4x3GxDflkvM0f/hzP+Gz5Nk3Aj9EwAh3ULjrw4jV7cIjepJRiBNZ2CVne8k3LyYBxYydCTekLaArjBczAUpTI8tzAFgpYJdLGi7aZ4e+5dNIC8CFNMIrvs4VFTWK6iIRi/QcD0axCrPVL8imCHD1lYv+1P9rkRTLXPGELVUdxR3tk6iEASgcWiD9GgzG38tw53fZNAX8udTtY8sPhqNsTd3TajMBfgClsW72qFpX1hi0bj97xyp/O0sNslfS3+OuAtc4TGXVHD9YXrPcANXrM0uCCl/o1b7JW1cdp2kyENnSXCK1DK5JHCByFiGQ7dpMRdDptL2FXkB2m1Hmm50APjuKq2TCqr/ew1r4yCiAwrcTZtyz21SXkRGbCqVvR3A3SagdA7pJYpNbkNG9IJznbxZI6dY3TWcKWfSnITguErnZ0Y7NDfqwBCI5KUKrsJtBLmFeJPx88UVEaz2Gi6F53I64twyMQZv7Nbmp7jSVYWVPe9Q/6bfPBe8OPdKL1vJ+YdnGtHvbhmol6UKZ1hTaDCNuF1JdP1PBdMhntRzly2W1X4PzvYPsGEfvYrkOBPTdCkxl/5HKJ1X9IQdQIODN5tTnUzngZFxMnaNrI0W03jRu3xbpTyxL2iWwWR71g24="
 
 addons:
   apt:
@@ -22,11 +27,15 @@ addons:
       - g++-4.8
 
 before_install:
-    - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
+  - openssl aes-256-cbc -K $encrypted_e09404c5d59a_key -iv $encrypted_e09404c5d59a_iv -in github_deploy_key.enc -out github_deploy_key -d
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
 
 after_success:
   - git config --global user.email "builds@travis-ci.com"
   - git config --global user.name "Travis CI"
+  -  |  $(npm bin)/set-up-ssh --key "$encrypted_e09404c5d59a_key" \
+     --iv "$encrypted_e09404c5d59a_iv" \
+     --path-encrypted-key ".travis/github_deploy_key.enc"
   - >
     [ "${TRAVIS_BRANCH}" = "master" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ] &&
     export GIT_TAG=$(make version) ||
