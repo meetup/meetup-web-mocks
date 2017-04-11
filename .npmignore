@@ -10,9 +10,10 @@ pids
 node_modules
 
 .DS_Store
-npm-debug.log
+*.log
 .swo
 .swp
 .*.swp
 .npmrc
 
+github_deploy_key
