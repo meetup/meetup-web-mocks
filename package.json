@@ -10,7 +10,7 @@
     "lint": "yarn run lint:base -- --fix",
     "lint:base": "eslint . --ext .js, .jsx",
     "modules:clean": "rm -rf node_modules",
-    "install": "yarn run build",
+    "prepublish": "yarn run build",
     "test": "yarn run lint:base"
   },
   "repository": {
