@@ -44,6 +44,7 @@ after_success:
     export NPM_TAG=beta
   - echo "GIT_TAG=$GIT_TAG"
   - echo "NPM_TAG=$NPM_TAG"
+  - echo "yarn version --new-version $GIT_TAG"
   - >
     [ "${TRAVIS_BRANCH}" = "master" ] &&
     git commit -am "Commit .npmrc in tag pushed to npm" &&
