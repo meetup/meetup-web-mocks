@@ -53,7 +53,7 @@ after_success:
     echo "versioned" &&
     git push --tags git@github.com:$TRAVIS_REPO_SLUG.git &&
     echo "pushed" &&
-    yarn publish --tag $NPM_TAG &&
+    yarn publish . &&
     echo "published" ||
     echo "skipping versioning"
 
