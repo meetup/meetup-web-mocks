@@ -44,12 +44,15 @@ after_success:
     export NPM_TAG=beta
   - echo "GIT_TAG=$GIT_TAG"
   - echo "NPM_TAG=$NPM_TAG"
+  - echo "yarn version --new-version $GIT_TAG"
   - >
     [ "${TRAVIS_BRANCH}" = "master" ] &&
+    yarn publish . --new-version $GIT_TAG &&
+    echo "published"
     git commit -am "Commit .npmrc in tag pushed to npm" &&
-    npm version $GIT_TAG -m "Version $GIT_TAG built by Travis CI - https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_JOB_ID" &&
+    echo "committed" &&
     git push --tags git@github.com:$TRAVIS_REPO_SLUG.git &&
-    npm publish --tag $NPM_TAG ||
+    echo "pushed" ||
     echo "skipping versioning"
 
 notifications:
