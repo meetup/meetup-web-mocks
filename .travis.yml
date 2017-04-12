@@ -47,14 +47,12 @@ after_success:
   - echo "yarn version --new-version $GIT_TAG"
   - >
     [ "${TRAVIS_BRANCH}" = "master" ] &&
+    yarn publish . --new-version $GIT_TAG &&
+    echo "published"
     git commit -am "Commit .npmrc in tag pushed to npm" &&
     echo "committed" &&
-    yarn version --new-version $GIT_TAG &&
-    echo "versioned" &&
     git push --tags git@github.com:$TRAVIS_REPO_SLUG.git &&
-    echo "pushed" &&
-    yarn publish . &&
-    echo "published" ||
+    echo "pushed" ||
     echo "skipping versioning"
 
 notifications:
