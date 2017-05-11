@@ -8,32 +8,35 @@ import {
 	MOCK_COMM_APP_STATE
 } from './group/communication/app';
 
-export const MOCK_APP_STATE = {
-	app: {
-		self: {
-			type: 'member',
-			value: {
-				id: 1234,
-				status: 'prereg',
-			}
-		},
-		group: {
-			type: 'group',
-			value: MOCK_GROUP
-		},
-		events: {
-			type: 'event',
-			value: [
-				{ ...MOCK_EVENT, ...({ id: '3456' }) },
-				{ ...MOCK_EVENT, ...({ id: '4567' }) }
-			]
-		},
-		event: {
-			type: 'event',
-			value: MOCK_EVENT,
-		},
-		...MOCK_COMM_APP_STATE
+const api = {
+	self: {
+		type: 'member',
+		value: {
+			id: 1234,
+			status: 'prereg',
+		}
 	},
+	group: {
+		type: 'group',
+		value: MOCK_GROUP
+	},
+	events: {
+		type: 'event',
+		value: [
+			{ ...MOCK_EVENT, ...({ id: '3456' }) },
+			{ ...MOCK_EVENT, ...({ id: '4567' }) }
+		]
+	},
+	event: {
+		type: 'event',
+		value: MOCK_EVENT,
+	},
+	...MOCK_COMM_APP_STATE
+};
+
+export const MOCK_APP_STATE = {
+	app:api,
+	api,
 	config: {
 		apiUrl: 'http://fake.api.meetup.com',
 		csrf: '1234_fake_csrf',
