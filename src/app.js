@@ -114,6 +114,21 @@ export const mockQuery = ({ location, params }) => {
 	};
 };
 
+export const mockQueryApiHeaders = ({ location, params }) => {
+	return {
+		type: 'group',
+		endpoint: (params || {}).urlname || 'foo',
+		params: params,
+		meta: {
+			apiMetaheaders: [
+				'unread-notifications',
+				'unread-messages',
+			]
+		},
+		ref: 'group'
+	};
+};
+
 export const mockQueryBadType = ({ location, params }) => {
 	const type = 'lkajlhsdhljaskliub';
 	return { ...mockQuery({ location, params }), type };
