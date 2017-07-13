@@ -116,7 +116,7 @@ export const mockQuery = ({ location, params }) => {
 
 export const mockQueryApiHeaders = ({ location, params }) => {
 	return {
-		type: 'group',
+		type: 'member',
 		endpoint: (params || {}).urlname || 'foo',
 		params: params,
 		meta: {
@@ -125,7 +125,7 @@ export const mockQueryApiHeaders = ({ location, params }) => {
 				'unread-messages',
 			]
 		},
-		ref: 'group'
+		ref: 'self'
 	};
 };
 
