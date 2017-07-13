@@ -105,11 +105,12 @@ export const MOCK_MEANINGLESS_ACTION = {
 	payload: '/'
 };
 
-export const mockQuery = ({ location, params }) => {
+export const mockQuery = ({ location, params, apiMetaHeaders }) => {
 	return {
 		type: 'group',
 		endpoint: (params || {}).urlname || 'foo',
 		params: params,
+		meta: { apiMetaHeaders },
 		ref: 'group'
 	};
 };
