@@ -6,14 +6,15 @@ export const MOCK_MEMBER = {
 	},
 };
 
-export const MOCK_SELF = { ...MOCK_MEMBER, ...({ lang: 'en_US' }) };
-export const MOCK_SELF_FR = { ...MOCK_MEMBER, ...({ lang: 'fr_FR' }) };
+export const MOCK_SELF = { ...MOCK_MEMBER, ...{ lang: 'en_US' } };
+export const MOCK_SELF_FR = { ...MOCK_MEMBER, ...{ lang: 'fr_FR' } };
 
-export const MOCK_DUOTONES = [
-	['a', 'b']
-];
+export const MOCK_DUOTONES = [['a', 'b']];
 export const MOCK_DUOTONE_URLS = {
-	dtaxb: 'http://a.b',
+	dtaxb: {
+		small: 'http://a.b',
+		large: 'http://a.b',
+	},
 };
 
 export const MOCK_GROUP = {
@@ -22,17 +23,22 @@ export const MOCK_GROUP = {
 	organizer: {
 		id: 164510652,
 		name: 'Grayson Cheese',
-		bio: 'Org bio lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu tellus sit amet erat blandit volutpat.',
+		bio:
+			'Org bio lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu tellus sit amet erat blandit volutpat.',
 		photo: {
 			id: 257204155,
-			highres_link: 'http://photos1.dev.meetupstatic.com/photos/member/a/c/7/b/highres_257204155.jpeg',
-			photo_link: 'http://photos1.dev.meetupstatic.com/photos/member/a/c/7/b/member_257204155.jpeg',
-			thumb_link: 'http://photos1.dev.meetupstatic.com/photos/member/a/c/7/b/thumb_257204155.jpeg',
+			highres_link:
+				'http://photos1.dev.meetupstatic.com/photos/member/a/c/7/b/highres_257204155.jpeg',
+			photo_link:
+				'http://photos1.dev.meetupstatic.com/photos/member/a/c/7/b/member_257204155.jpeg',
+			thumb_link:
+				'http://photos1.dev.meetupstatic.com/photos/member/a/c/7/b/thumb_257204155.jpeg',
 			type: 'member',
-			base_url: 'http://photos1.dev.meetupstatic.com'
-		}
+			base_url: 'http://photos1.dev.meetupstatic.com',
+		},
 	},
-	plain_text_description: 'Plain text description lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu tellus sit amet erat blandit volutpat. Suspendisse tincidunt pulvinar vehicula. Mauris eget tristique mi. Ut tincidunt, ante eget aliquet eleifend, ligula lorem elementum felis, quis consectetur sapien justo ut eros. Maecenas tempus lacus metus, eu pretium massa convallis vitae. Donec id fringilla orci. Nunc eget elementum massa. Pellentesque pulvinar ipsum porta finibus laoreet. Donec pharetra quis nunc in auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Nulla eget nibh quis nisi commodo accumsan. Donec sed suscipit justo. Aliquam erat volutpat. Nunc a nulla massa. Curabitur at elit eu neque congue fermentum',
+	plain_text_description:
+		'Plain text description lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu tellus sit amet erat blandit volutpat. Suspendisse tincidunt pulvinar vehicula. Mauris eget tristique mi. Ut tincidunt, ante eget aliquet eleifend, ligula lorem elementum felis, quis consectetur sapien justo ut eros. Maecenas tempus lacus metus, eu pretium massa convallis vitae. Donec id fringilla orci. Nunc eget elementum massa. Pellentesque pulvinar ipsum porta finibus laoreet. Donec pharetra quis nunc in auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Nulla eget nibh quis nisi commodo accumsan. Donec sed suscipit justo. Aliquam erat volutpat. Nunc a nulla massa. Curabitur at elit eu neque congue fermentum',
 	key_photo: {
 		id: 1234,
 		photo_link: 'http://placekitten.com/400/300',
@@ -51,79 +57,81 @@ export const MOCK_GROUP = {
 		light_color: MOCK_DUOTONES[0][1],
 		dark_color: MOCK_DUOTONES[0][0],
 	},
-	event_sample: [{
-		id: 1234,
-		name: 'Sample event',
-		time: new Date().getTime(),
-		yes_rsvp_count: 50
-	}],
+	event_sample: [
+		{
+			id: 1234,
+			name: 'Sample event',
+			time: new Date().getTime(),
+			yes_rsvp_count: 50,
+		},
+	],
 };
 
 export const MOCK_CHAPTER_MEMBER = {
-	id:82159492,
-	name:'Grayson Cheese',
-	status:'active',
-	joined:1361806241000,
-	city:'new york',
-	country:'us',
-	lat:40,
-	lon:-72,
+	id: 82159492,
+	name: 'Grayson Cheese',
+	status: 'active',
+	joined: 1361806241000,
+	city: 'new york',
+	country: 'us',
+	lat: 40,
+	lon: -72,
 
 	photo: {
 		photo_link: 'http://placekitten.com/g/400/400',
 	},
 	group_profile: {
-		status:'active',
-		visited:1396285003000,
-		created:1395768492000,
-		updated:1478880527000,
+		status: 'active',
+		visited: 1396285003000,
+		created: 1395768492000,
+		updated: 1478880527000,
 		group: MOCK_GROUP,
 		intro: 'cheese is the best!',
-	}
+	},
 };
 export const MOCK_CHAPTER_MEMBER_2 = {
-	id:234322,
-	name:'Chesterton Gordidason',
-	status:'active',
-	joined:1361806241020,
-	city:'new york',
-	country:'us',
-	lat:40,
-	lon:-72,
+	id: 234322,
+	name: 'Chesterton Gordidason',
+	status: 'active',
+	joined: 1361806241020,
+	city: 'new york',
+	country: 'us',
+	lat: 40,
+	lon: -72,
 
 	photo: {
 		photo_link: 'http://placekitten.com/g/400/400',
 	},
 	group_profile: {
-		status:'active',
-		visited:1396285003000,
-		created:1395768492000,
-		updated:1478880527000,
+		status: 'active',
+		visited: 1396285003000,
+		created: 1395768492000,
+		updated: 1478880527000,
 		group: MOCK_GROUP,
 		intro: 'cheese is the best!',
-	}
+	},
 };
 export const MOCK_CHAPTER_MEMBER_3 = {
-	id:23222,
-	name:'Simon Cheddar',
-	status:'active',
-	joined:1361806541020,
-	city:'new york',
-	country:'us',
-	lat:40,
-	lon:-72,
+	id: 23222,
+	name: 'Simon Cheddar',
+	status: 'active',
+	joined: 1361806541020,
+	city: 'new york',
+	country: 'us',
+	lat: 40,
+	lon: -72,
 
 	photo: {
 		photo_link: 'http://placekitten.com/g/400/400',
 	},
 	group_profile: {
-		status:'active',
-		visited:1396285003000,
-		created:1395768492000,
-		updated:1478880527000,
+		status: 'active',
+		visited: 1396285003000,
+		created: 1395768492000,
+		updated: 1478880527000,
 		group: MOCK_GROUP,
 		intro: 'cheese is the best!',
-	}
+	},
 };
 
 export const MOCK_VENUE = {
@@ -135,88 +143,72 @@ export const MOCK_VENUE = {
 	zip: '00000',
 };
 
-
-export const MOCK_COMMENT ={
-	id:'1234',
-	comment:'comment 1',
-	created:1479838415,
-	like_count:6,
-	member:MOCK_CHAPTER_MEMBER,
-	deleted:false,
-	visible:true,
-	updated:1479838415,
-	utc_offset:-18000000,
-	self:{
-		liked:false,
-		actions:[
-			'like',
-			'delete',
-			'flag_spam'
-		]
-	}
+export const MOCK_COMMENT = {
+	id: '1234',
+	comment: 'comment 1',
+	created: 1479838415,
+	like_count: 6,
+	member: MOCK_CHAPTER_MEMBER,
+	deleted: false,
+	visible: true,
+	updated: 1479838415,
+	utc_offset: -18000000,
+	self: {
+		liked: false,
+		actions: ['like', 'delete', 'flag_spam'],
+	},
 };
 
 export const MOCK_COMMENTS_LIST = {
-	0:MOCK_COMMENT,
-	1:{
+	0: MOCK_COMMENT,
+	1: {
 		...MOCK_COMMENT,
-		id:'12345',
-		comment:'comment 2, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt facilisis dui ac tincidunt. Duis rutrum bibendum odio nec tincidunt. Suspendisse sagittis blandit venenatis.',
-		created:1478879940,
-		like_count:3,
-		self:{
-			liked:false,
-			actions:[
-				'like',
-				'delete',
-				'flag_spam'
-			]
-		}
+		id: '12345',
+		comment:
+			'comment 2, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt facilisis dui ac tincidunt. Duis rutrum bibendum odio nec tincidunt. Suspendisse sagittis blandit venenatis.',
+		created: 1478879940,
+		like_count: 3,
+		self: {
+			liked: false,
+			actions: ['like', 'delete', 'flag_spam'],
+		},
 	},
-	2:{
+	2: {
 		...MOCK_COMMENT,
-		id:21234,
-		comment:'Morbi vel purus eu neque ultricies maximus. Nunc sollicitudin maximus justo sed fringilla.',
-		created:1478879939,
-		like_count:22,
-		self:{
-			liked:false,
-			actions:[
-				'like',
-				'flag_spam'
-			]
-		}
+		id: 21234,
+		comment:
+			'Morbi vel purus eu neque ultricies maximus. Nunc sollicitudin maximus justo sed fringilla.',
+		created: 1478879939,
+		like_count: 22,
+		self: {
+			liked: false,
+			actions: ['like', 'flag_spam'],
+		},
 	},
-	3:{
+	3: {
 		...MOCK_COMMENT,
-		id:23423,
-		comment:'Sed odio tortor, vulputate ut tincidunt vitae, dignissim eget felis.',
-		created:1478879939,
-		like_count:0,
-		self:{
-			liked:false,
-			actions:[
-				'like',
-				'delete',
-				'flag_spam'
-			]
-		}
+		id: 23423,
+		comment:
+			'Sed odio tortor, vulputate ut tincidunt vitae, dignissim eget felis.',
+		created: 1478879939,
+		like_count: 0,
+		self: {
+			liked: false,
+			actions: ['like', 'delete', 'flag_spam'],
+		},
 	},
-	4:{
+	4: {
 		...MOCK_COMMENT,
-		id:234,
-		comment:'Curabitur elit nisi, porta et elit non, efficitur sodales augue. Phasellus volutpat, lectus ac tempor laoreet, diam urna commodo lacus, eget bibendum risus augue a sem.',
-		created:1478879939,
-		like_count:0,
-		self:{
-			liked:false,
-			actions:[
-				'like',
-				'delete',
-				'flag_spam'
-			]
-		}
-	}
+		id: 234,
+		comment:
+			'Curabitur elit nisi, porta et elit non, efficitur sodales augue. Phasellus volutpat, lectus ac tempor laoreet, diam urna commodo lacus, eget bibendum risus augue a sem.',
+		created: 1478879939,
+		like_count: 0,
+		self: {
+			liked: false,
+			actions: ['like', 'delete', 'flag_spam'],
+		},
+	},
 };
 
 const oneMonthAgo = new Date();
@@ -232,32 +224,36 @@ export const MOCK_EVENT = {
 	longer than it needs to be why am I still typing omg`,
 	duration: 3600000,
 	name: 'So much fun',
-	rsvp_sample: [{
-		created: 1462833255609,
-		id: 1234,
-		member: MOCK_MEMBER,
-		updated: 1462833255610
-	}, {
-		created: 1462833255609,
-		id: 2345,
-		member: { ...MOCK_MEMBER, ...({ id: 8912894 }) },
-		updated: 1462833255610
-	}, {
-		created: 1462833255609,
-		id: 3456,
-		member: { ...MOCK_MEMBER, ...({ id: 899828 }) },
-		updated: 1462833255610
-	}],
+	rsvp_sample: [
+		{
+			created: 1462833255609,
+			id: 1234,
+			member: MOCK_MEMBER,
+			updated: 1462833255610,
+		},
+		{
+			created: 1462833255609,
+			id: 2345,
+			member: { ...MOCK_MEMBER, ...{ id: 8912894 } },
+			updated: 1462833255610,
+		},
+		{
+			created: 1462833255609,
+			id: 3456,
+			member: { ...MOCK_MEMBER, ...{ id: 899828 } },
+			updated: 1462833255610,
+		},
+	],
 	venue: MOCK_VENUE,
 	how_to_find_us: 'how to find us',
 	event_hosts: [
 		MOCK_CHAPTER_MEMBER,
 		MOCK_CHAPTER_MEMBER_2,
-		MOCK_CHAPTER_MEMBER_3
+		MOCK_CHAPTER_MEMBER_3,
 	],
 	fee: {
 		amount: 10,
-		currency: 'USD'
+		currency: 'USD',
 	},
 	rsvpable: true,
 	group: MOCK_GROUP,
@@ -270,7 +266,7 @@ export const MOCK_EVENT = {
 	time: oneMonthFuture.getTime(),
 	utc_offset: 0,
 	visibility: 'public',
-	yes_rsvp_count: 23
+	yes_rsvp_count: 23,
 };
 
 // Mock category sourced from https://www.meetup.com/meetup_api/docs/find/topic_categories/
@@ -281,19 +277,24 @@ export const MOCK_CATEGORY = {
 	sort_name: 'Movements',
 	photo: {
 		id: 450131941,
-		highres_link: 'http://photos1.meetupstatic.com/photos/event/2/e/a/5/highres_450131941.jpeg',
-		photo_link: 'http://photos1.meetupstatic.com/photos/event/2/e/a/5/600_450131941.jpeg',
-		thumb_link: 'http://photos1.meetupstatic.com/photos/event/2/e/a/5/thumb_450131941.jpeg',
+		highres_link:
+			'http://photos1.meetupstatic.com/photos/event/2/e/a/5/highres_450131941.jpeg',
+		photo_link:
+			'http://photos1.meetupstatic.com/photos/event/2/e/a/5/600_450131941.jpeg',
+		thumb_link:
+			'http://photos1.meetupstatic.com/photos/event/2/e/a/5/thumb_450131941.jpeg',
 		type: 'event',
-		base_url: 'http://photos1.meetupstatic.com'
+		base_url: 'http://photos1.meetupstatic.com',
 	},
 	category_ids: [4, 13],
-	best_topics: [{
-		id: 16645,
-		name: 'Volunteering',
-		urlkey: 'volunteering',
-		lang: 'en_US'
-	}]
+	best_topics: [
+		{
+			id: 16645,
+			name: 'Volunteering',
+			urlkey: 'volunteering',
+			lang: 'en_US',
+		},
+	],
 };
 
 export const MOCK_CATEGORIES = [MOCK_CATEGORY];
