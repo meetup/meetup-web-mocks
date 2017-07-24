@@ -72,7 +72,7 @@ export const MOCK_OAUTH_COOKIES = {
 };
 
 export const MOCK_RENDERPROPS = {
-	location: {  // https://github.com/reactjs/history/blob/master/docs/Location.md
+	location: { // https://github.com/reactjs/history/blob/master/docs/Location.md
 		pathname: '/foo',
 		search: '?foo',
 		state: {},
@@ -88,7 +88,7 @@ export const MOCK_RENDERPROPS = {
 };
 
 export const MOCK_RENDERPROPS_UTF8 = {
-	location: {  // https://github.com/reactjs/history/blob/master/docs/Location.md
+	location: { // https://github.com/reactjs/history/blob/master/docs/Location.md
 		pathname: '/バ-京',
 		search: '',
 		state: {},
@@ -105,11 +105,12 @@ export const MOCK_MEANINGLESS_ACTION = {
 	payload: '/'
 };
 
-export const mockQuery = ({ location, params }) => {
+export const mockQuery = ({ location, params, apiMetaHeaders }) => {
 	return {
 		type: 'group',
 		endpoint: (params || {}).urlname || 'foo',
 		params: params,
+		meta: { apiMetaHeaders },
 		ref: 'group'
 	};
 };
