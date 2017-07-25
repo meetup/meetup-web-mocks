@@ -1,12 +1,7 @@
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
-import {
-	MOCK_GROUP,
-	MOCK_EVENT,
-} from './api';
-import {
-	MOCK_COMM_APP_STATE
-} from './group/communication/app';
+import { MOCK_GROUP, MOCK_EVENT } from './api';
+import { MOCK_COMM_APP_STATE } from './group/communication/app';
 
 const api = {
 	self: {
@@ -14,28 +9,28 @@ const api = {
 		value: {
 			id: 1234,
 			status: 'prereg',
-		}
+		},
 	},
 	group: {
 		type: 'group',
-		value: MOCK_GROUP
+		value: MOCK_GROUP,
 	},
 	events: {
 		type: 'event',
 		value: [
-			{ ...MOCK_EVENT, ...({ id: '3456' }) },
-			{ ...MOCK_EVENT, ...({ id: '4567' }) }
-		]
+			{ ...MOCK_EVENT, ...{ id: '3456' } },
+			{ ...MOCK_EVENT, ...{ id: '4567' } },
+		],
 	},
 	event: {
 		type: 'event',
 		value: MOCK_EVENT,
 	},
-	...MOCK_COMM_APP_STATE
+	...MOCK_COMM_APP_STATE,
 };
 
 export const MOCK_APP_STATE = {
-	app:api,
+	app: api,
 	api,
 	config: {
 		apiUrl: 'http://fake.api.meetup.com',
@@ -46,33 +41,36 @@ export const MOCK_APP_STATE = {
 	routing: {
 		locationBeforeTransitions: {
 			pathname: '/foo',
-		}
+		},
 	},
 };
 
 export const MOCK_API_PROBLEM = {
-	problem: 'There was an internal problem in the API'
+	problem: 'There was an internal problem in the API',
 };
 
-export const MOCK_API_RESULT = [{
-	ref: 'group',
-	type: 'group',
-	value: MOCK_APP_STATE.app.group.value
-}];
+export const MOCK_API_RESULT = [
+	{
+		ref: 'group',
+		type: 'group',
+		value: MOCK_APP_STATE.app.group.value,
+	},
+];
 
 export const MOCK_FETCH_API_RESPONSE = {
 	queries: [],
-	responses: []
+	responses: [],
 };
 
 export const MOCK_OAUTH_COOKIES = {
 	oauth_token: '1234',
 	refresh_token: 'asdf',
-	anonymous: true
+	anonymous: true,
 };
 
 export const MOCK_RENDERPROPS = {
-	location: { // https://github.com/reactjs/history/blob/master/docs/Location.md
+	location: {
+		// https://github.com/reactjs/history/blob/master/docs/Location.md
 		pathname: '/foo',
 		search: '?foo',
 		state: {},
@@ -83,35 +81,40 @@ export const MOCK_RENDERPROPS = {
 		},
 	},
 	params: {
-		urlname: 'foo'
-	}
+		urlname: 'foo',
+	},
 };
 
 export const MOCK_RENDERPROPS_UTF8 = {
-	location: { // https://github.com/reactjs/history/blob/master/docs/Location.md
+	location: {
+		// https://github.com/reactjs/history/blob/master/docs/Location.md
 		pathname: '/バ-京',
 		search: '',
 		state: {},
 		action: 'PUSH',
-		key: '1234'
+		key: '1234',
 	},
 	params: {
-		urlname: 'バ-京'
-	}
+		urlname: 'バ-京',
+	},
 };
 
 export const MOCK_MEANINGLESS_ACTION = {
 	type: 'ARBITRARY',
-	payload: '/'
+	payload: '/',
 };
 
 export const mockQuery = ({ location, params, apiMetaHeaders }) => {
+	const meta = {};
+	if (apiMetaHeaders) {
+		meta.apiMetaHeaders = apiMetaHeaders;
+	}
 	return {
 		type: 'group',
 		endpoint: (params || {}).urlname || 'foo',
 		params: params,
-		meta: { apiMetaHeaders },
-		ref: 'group'
+		meta,
+		ref: 'group',
 	};
 };
 
@@ -124,14 +127,14 @@ export const MOCK_AUTH_HEADER = `Bearer ${MOCK_OAUTH_COOKIES}.oauth_token`;
 export const MOCK_DATETIME = new Date().getTime();
 export const MOCK_CREDENTIALS = {
 	username: 'Michael McGahan',
-	pw: 'whatever'
+	pw: 'whatever',
 };
 
 export const MOCK_LOGIN_RESPONSE = {
 	value: {
 		member: {},
 		oauth_token: 1234,
-	}
+	},
 };
 
 export const MOCK_POST_ACTION = {
@@ -144,7 +147,7 @@ export const MOCK_POST_ACTION = {
 		},
 		onSuccess: payload => ({ type: 'MOCK_SUCCESS', payload }),
 		onError: err => ({ type: 'MOCK_ERROR', payload: err, error: true }),
-	}
+	},
 };
 
 export const MOCK_DELETE_ACTION = {
@@ -157,15 +160,18 @@ export const MOCK_DELETE_ACTION = {
 		},
 		onSuccess: payload => ({ type: 'MOCK_SUCCESS', payload }),
 		onError: err => ({ type: 'MOCK_ERROR', payload: err, error: true }),
-	}
+	},
 };
 
 // Arbitrary string response payload from server render
-export const MOCK_RENDER_RESULT = '<html><body><h1>Hello world</h1></body></html>';
+export const MOCK_RENDER_RESULT =
+	'<html><body><h1>Hello world</h1></body></html>';
 
 // string 'Cookie:' header from MOCK_OAUTH_COOKIES
-export const MOCK_COOKIE_HEADER = Object.keys(MOCK_OAUTH_COOKIES)
-	.reduce((acc, key) => acc += `${key}=${JSON.stringify(MOCK_OAUTH_COOKIES[key])}; `, '');
+export const MOCK_COOKIE_HEADER = Object.keys(MOCK_OAUTH_COOKIES).reduce(
+	(acc, key) => (acc += `${key}=${JSON.stringify(MOCK_OAUTH_COOKIES[key])}; `),
+	''
+);
 
 // mock the renderRequest$ function provided by the server-locale app bundle
 export const MOCK_RENDER_REQUEST$ = () =>
@@ -178,7 +184,7 @@ export const MOCK_renderRequestMap = {
 export const MOCK_REQUEST_COOKIES = {
 	url: '/',
 	headers: {
-		cookie: MOCK_COOKIE_HEADER
+		cookie: MOCK_COOKIE_HEADER,
 	},
 };
 
@@ -214,14 +220,13 @@ export const MOCK_ROUTES = [
 			{
 				path: 'foo',
 				component: () => {},
-				query: () => mockQuery({})
+				query: () => mockQuery({}),
 			},
 			{
 				path: 'nullQuery',
 				component: () => {},
 				query: () => null,
 			},
-		]
+		],
 	},
 ];
-
