@@ -57,6 +57,7 @@ export const MOCK_GROUP = {
 		light_color: MOCK_DUOTONES[0][1],
 		dark_color: MOCK_DUOTONES[0][0],
 	},
+	duotoneUrl: MOCK_DUOTONE_URLS.dtaxb,
 	event_sample: [
 		{
 			id: 1234,
