@@ -35,7 +35,8 @@ export const MOCK_APP_STATE = {
 	config: {
 		apiUrl: 'http://fake.api.meetup.com',
 		csrf: '1234_fake_csrf',
-		localeCode: 'en-US',
+		localeCode: 'en-US', // deprecated
+		requestLanguage: 'en-US',
 		baseUrl: 'https://beta2.dev.meetup.com:8000',
 	},
 	routing: {
