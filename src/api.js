@@ -299,3 +299,60 @@ export const MOCK_CATEGORY = {
 };
 
 export const MOCK_CATEGORIES = [MOCK_CATEGORY];
+
+export const MOCK_EVENT_SCHEDULE_RESPONSE = {
+	ref: 'eventSchedule',
+	value: {
+		created: 1505337385000,
+		duration: 7200000,
+		id: 'cgpwfnywmbsb',
+		name: 'A Weekly Hike',
+		status: 'upcoming',
+		time: 1505430000000,
+		updated: 1505337385000,
+		utc_offset: -14400000,
+		waitlist_count: 0,
+		yes_rsvp_count: 0,
+		group: {
+			created: 1401198587000,
+			name: 'Managing Meetup',
+			id: 14705172,
+			join_mod: 'approval',
+			lat: 40.720001220703125,
+			lon: -74,
+			urlname: 'ManagingMeetup',
+			who: 'Managers',
+			localized_location: 'New York, NY',
+			region: 'en_US'
+		},
+		link: 'https://www.dev.meetup.com/ManagingMeetup/events/cgpwfnywmbsb/',
+		description: '<p>• What we\'ll do<br/>Hiking often! Mountains Forests all types of trails</p> <p>• What to bring<br/>Shoes and water</p>',
+		visibility: 'public_limited'
+	},
+	meta: {
+		server: 'ivy',
+		requestId: 'c0ae499a-a473-43c5-94f8-f457c66f6c05',
+		endpoint: 'ManagingMeetup/events/',
+		statusCode: 201
+	}
+};
+
+export const MOCK_EVENT_SCHEDULE_RESPONSE_ERRORS = {
+	ref: 'eventSchedule',
+	value: {
+		errors: [
+			{ 
+				code:'name_error',
+				message: 'A title is required to post your Meetup',
+				field: 'name'
+			}
+		]
+	},
+	error: 'Bad Request',
+	meta: {
+		server: 'ivy',
+		requestId: 'a6d2f9d3-9c98-416e-8f51-5753384c8de2',
+		endpoint: 'ManagingMeetup/events/',
+		statusCode: 400
+	}
+};
