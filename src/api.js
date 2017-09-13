@@ -340,13 +340,11 @@ export const MOCK_EVENT_SCHEDULE_RESPONSE = {
 export const MOCK_EVENT_SCHEDULE_RESPONSE_ERRORS = {
 	ref: 'eventSchedule',
 	value: {
-		errors: [
-			{ 
-				code:'name_error',
-				message: 'A title is required to post your Meetup',
-				field: 'name'
-			}
-		]
+		errors: [{
+			code:'name_error',
+			message: 'A title is required to post your Meetup',
+			field: 'name'
+		}]
 	},
 	error: 'Bad Request',
 	meta: {
