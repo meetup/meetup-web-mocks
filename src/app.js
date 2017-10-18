@@ -43,6 +43,7 @@ export const MOCK_APP_STATE = {
 			pathname: '/foo',
 		},
 	},
+	toasts: { ready: [] },
 };
 
 export const MOCK_API_PROBLEM = {
