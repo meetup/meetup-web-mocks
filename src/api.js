@@ -268,6 +268,7 @@ export const MOCK_EVENT = {
 	utc_offset: 0,
 	visibility: 'public',
 	yes_rsvp_count: 23,
+	link: 'https://www.meetup.com/group/events/123456',
 };
 
 // Mock category sourced from https://www.meetup.com/meetup_api/docs/find/topic_categories/
