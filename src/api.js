@@ -62,7 +62,7 @@ export const MOCK_GROUP = {
 		{
 			id: 1234,
 			name: 'Sample event',
-			time: new Date().getTime(),
+			time: '1508959523994',
 			yes_rsvp_count: 50,
 		},
 	],
