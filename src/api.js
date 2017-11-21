@@ -3,6 +3,7 @@ export const MOCK_MEMBER = {
 	id: 1243,
 	photo: {
 		photo_link: 'http://placekitten.com/g/400/400',
+		thumb_link: 'http://placekitten.com/g/200/200',
 	},
 };
 
