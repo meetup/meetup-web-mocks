@@ -69,7 +69,7 @@ export const MOCK_OAUTH_COOKIES = {
 	anonymous: true,
 };
 
-export const MOCK_RENDE RPROPS = {
+export const MOCK_RENDERPROPS = {
 	location: {
 		// https://github.com/reactjs/history/blob/master/docs/Location.md
 		pathname: '/foo',
@@ -205,7 +205,9 @@ const mock_valid_config = {
 		key: process.env.MUPWEB_OAUTH_KEY,
 	},
 };
-mock_valid_config.API_SERVER_ROOT_URL = `${mock_valid_config.API_PROTOCOL}://${mock_valid_config.API_HOST}`;
+mock_valid_config.API_SERVER_ROOT_URL = `${mock_valid_config.API_PROTOCOL}://${
+	mock_valid_config.API_HOST
+}`;
 export const MOCK_VALID_CONFIG = mock_valid_config;
 
 export const MOCK_ROUTES = [
