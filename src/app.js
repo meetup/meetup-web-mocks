@@ -69,7 +69,7 @@ export const MOCK_OAUTH_COOKIES = {
 	anonymous: true,
 };
 
-export const MOCK_RENDERPROPS = {
+export const MOCK_RENDE RPROPS = {
 	location: {
 		// https://github.com/reactjs/history/blob/master/docs/Location.md
 		pathname: '/foo',
