@@ -25,21 +25,21 @@ export const MOCK_GROUP = {
 		id: 164510652,
 		name: 'Grayson Cheese',
 		bio:
-			'Org bio lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu tellus sit amet erat blandit volutpat.',
+		'Org bio lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu tellus sit amet erat blandit volutpat.',
 		photo: {
 			id: 257204155,
 			highres_link:
-				'http://photos1.dev.meetupstatic.com/photos/member/a/c/7/b/highres_257204155.jpeg',
+			'http://photos1.dev.meetupstatic.com/photos/member/a/c/7/b/highres_257204155.jpeg',
 			photo_link:
-				'http://photos1.dev.meetupstatic.com/photos/member/a/c/7/b/member_257204155.jpeg',
+			'http://photos1.dev.meetupstatic.com/photos/member/a/c/7/b/member_257204155.jpeg',
 			thumb_link:
-				'http://photos1.dev.meetupstatic.com/photos/member/a/c/7/b/thumb_257204155.jpeg',
+			'http://photos1.dev.meetupstatic.com/photos/member/a/c/7/b/thumb_257204155.jpeg',
 			type: 'member',
 			base_url: 'http://photos1.dev.meetupstatic.com',
 		},
 	},
 	plain_text_description:
-		'Plain text description lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu tellus sit amet erat blandit volutpat. Suspendisse tincidunt pulvinar vehicula. Mauris eget tristique mi. Ut tincidunt, ante eget aliquet eleifend, ligula lorem elementum felis, quis consectetur sapien justo ut eros. Maecenas tempus lacus metus, eu pretium massa convallis vitae. Donec id fringilla orci. Nunc eget elementum massa. Pellentesque pulvinar ipsum porta finibus laoreet. Donec pharetra quis nunc in auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Nulla eget nibh quis nisi commodo accumsan. Donec sed suscipit justo. Aliquam erat volutpat. Nunc a nulla massa. Curabitur at elit eu neque congue fermentum',
+	'Plain text description lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu tellus sit amet erat blandit volutpat. Suspendisse tincidunt pulvinar vehicula. Mauris eget tristique mi. Ut tincidunt, ante eget aliquet eleifend, ligula lorem elementum felis, quis consectetur sapien justo ut eros. Maecenas tempus lacus metus, eu pretium massa convallis vitae. Donec id fringilla orci. Nunc eget elementum massa. Pellentesque pulvinar ipsum porta finibus laoreet. Donec pharetra quis nunc in auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Nulla eget nibh quis nisi commodo accumsan. Donec sed suscipit justo. Aliquam erat volutpat. Nunc a nulla massa. Curabitur at elit eu neque congue fermentum',
 	key_photo: {
 		id: 1234,
 		photo_link: 'http://placekitten.com/400/300',
@@ -167,7 +167,7 @@ export const MOCK_COMMENTS_LIST = {
 		...MOCK_COMMENT,
 		id: '12345',
 		comment:
-			'comment 2, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt facilisis dui ac tincidunt. Duis rutrum bibendum odio nec tincidunt. Suspendisse sagittis blandit venenatis.',
+		'comment 2, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt facilisis dui ac tincidunt. Duis rutrum bibendum odio nec tincidunt. Suspendisse sagittis blandit venenatis.',
 		created: 1478879940,
 		like_count: 3,
 		self: {
@@ -179,7 +179,7 @@ export const MOCK_COMMENTS_LIST = {
 		...MOCK_COMMENT,
 		id: 21234,
 		comment:
-			'Morbi vel purus eu neque ultricies maximus. Nunc sollicitudin maximus justo sed fringilla.',
+		'Morbi vel purus eu neque ultricies maximus. Nunc sollicitudin maximus justo sed fringilla.',
 		created: 1478879939,
 		like_count: 22,
 		self: {
@@ -191,7 +191,7 @@ export const MOCK_COMMENTS_LIST = {
 		...MOCK_COMMENT,
 		id: 23423,
 		comment:
-			'Sed odio tortor, vulputate ut tincidunt vitae, dignissim eget felis.',
+		'Sed odio tortor, vulputate ut tincidunt vitae, dignissim eget felis.',
 		created: 1478879939,
 		like_count: 0,
 		self: {
@@ -203,7 +203,7 @@ export const MOCK_COMMENTS_LIST = {
 		...MOCK_COMMENT,
 		id: 234,
 		comment:
-			'Curabitur elit nisi, porta et elit non, efficitur sodales augue. Phasellus volutpat, lectus ac tempor laoreet, diam urna commodo lacus, eget bibendum risus augue a sem.',
+		'Curabitur elit nisi, porta et elit non, efficitur sodales augue. Phasellus volutpat, lectus ac tempor laoreet, diam urna commodo lacus, eget bibendum risus augue a sem.',
 		created: 1478879939,
 		like_count: 0,
 		self: {
@@ -281,11 +281,11 @@ export const MOCK_CATEGORY = {
 	photo: {
 		id: 450131941,
 		highres_link:
-			'http://photos1.meetupstatic.com/photos/event/2/e/a/5/highres_450131941.jpeg',
+		'http://photos1.meetupstatic.com/photos/event/2/e/a/5/highres_450131941.jpeg',
 		photo_link:
-			'http://photos1.meetupstatic.com/photos/event/2/e/a/5/600_450131941.jpeg',
+		'http://photos1.meetupstatic.com/photos/event/2/e/a/5/600_450131941.jpeg',
 		thumb_link:
-			'http://photos1.meetupstatic.com/photos/event/2/e/a/5/thumb_450131941.jpeg',
+		'http://photos1.meetupstatic.com/photos/event/2/e/a/5/thumb_450131941.jpeg',
 		type: 'event',
 		base_url: 'http://photos1.meetupstatic.com',
 	},
@@ -329,7 +329,7 @@ export const MOCK_EVENT_SCHEDULE_RESPONSE = {
 		},
 		link: 'https://www.dev.meetup.com/ManagingMeetup/events/cgpwfnywmbsb/',
 		description:
-			"<p>• What we'll do<br/>Hiking often! Mountains Forests all types of trails</p> <p>• What to bring<br/>Shoes and water</p>",
+		"<p>• What we'll do<br/>Hiking often! Mountains Forests all types of trails</p> <p>• What to bring<br/>Shoes and water</p>",
 		visibility: 'public_limited',
 	},
 	meta: {
@@ -386,7 +386,7 @@ export const MOCK_SHALLOW_EVENT = {
 	comment_count: 5,
 	created: MOCK_TIME,
 	description:
-		'The coolest event in the world during which we will run and dance and sing\n\t<script>alert("bad time")</script>, \uD83D\uDE0A, &lt;blink&gt;what what&lt;blink&gt; this is getting\n\tlonger than it needs to be why am I still typing omg',
+	'The coolest event in the world during which we will run and dance and sing\n\t<script>alert("bad time")</script>, \uD83D\uDE0A, &lt;blink&gt;what what&lt;blink&gt; this is getting\n\tlonger than it needs to be why am I still typing omg',
 	duration: 3600000,
 	name: 'So much fun',
 	rsvp_sample: [
@@ -447,3 +447,48 @@ export const MOCK_PAST_EVENTS = [
 export const UPCOMING_EVENT = { ...MOCK_EVENTS[0], status: 'upcoming' };
 export const PROPOSED_EVENT = { ...MOCK_EVENTS[1], status: 'proposed' };
 export const PAST_EVENT = { ...MOCK_EVENTS[2], status: 'past' };
+
+export const MOCK_FEEDBACK_SUMMARY_RESPONSE = {
+	eventId: '241470859',
+	summary: [
+		{
+			questionId: 'wouldYouGo',
+			answers: [
+				{
+					answerId: 'wouldYouGoYes',
+					value: 5,
+				},
+				{
+					answerId: 'wouldYouGoNo',
+					value: 3,
+				},
+			],
+		},
+		{
+			questionId: 'whatsWorthwhile',
+			answers: [
+				{
+					answerId: 'people',
+					value: 3,
+				},
+				{
+					answerId: 'purpose',
+					value: 2,
+				},
+			],
+		},
+		{
+			questionId: 'whyNot',
+			answers: [
+				{
+					answerId: 'hardToFind',
+					value: 2,
+				},
+				{
+					answerId: 'badVenue',
+					value: 1,
+				},
+			],
+		},
+	],
+};
