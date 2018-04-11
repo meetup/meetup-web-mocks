@@ -26,6 +26,11 @@ const api = {
 		type: 'event',
 		value: MOCK_EVENT,
 	},
+	[`event_${MOCK_GROUP.urlname}_${MOCK_EVENT.id}`]: {
+		type: 'event',
+		value: MOCK_EVENT,
+	},
+
 	...MOCK_COMM_APP_STATE,
 };
 
