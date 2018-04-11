@@ -1,6 +1,11 @@
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
-import { MOCK_GROUP, MOCK_EVENT } from './api';
+import {
+	MOCK_GROUP,
+	MOCK_EVENT,
+	MOCK_SHALLOW_GROUP,
+	MOCK_SHALLOW_EVENT,
+} from './api';
 import { MOCK_COMM_APP_STATE } from './group/communication/app';
 
 const api = {
@@ -26,9 +31,9 @@ const api = {
 		type: 'event',
 		value: MOCK_EVENT,
 	},
-	[`event_${MOCK_GROUP.urlname}_${MOCK_EVENT.id}`]: {
+	[`event_${MOCK_SHALLOW_GROUP.urlname}_${MOCK_SHALLOW_EVENT.id}`]: {
 		type: 'event',
-		value: MOCK_EVENT,
+		value: MOCK_SHALLOW_EVENT,
 	},
 
 	...MOCK_COMM_APP_STATE,
