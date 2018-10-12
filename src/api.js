@@ -145,8 +145,8 @@ export const MOCK_MEMBER_LIST_MEMBER_4 = {
 export const MOCK_MEMBER_LIST_MEMBER_5 = {
 	...MOCK_MEMBER_LIST_MEMBER,
 	name: 'Alfie Solomons',
-	last_visited: '2015-12-12T15:15:35.000Z',
-	joined: '2017-06-20T11:07:29.000Z',
+	last_visited: null,
+	joined: null,
 	id: '12345',
 	photo: {
 		id: '124124',
@@ -155,13 +155,14 @@ export const MOCK_MEMBER_LIST_MEMBER_5 = {
 	},
 	role: null,
 	dues: null,
+	status: 'banned',
 };
 
 export const MOCK_MEMBER_LIST_MEMBER_6 = {
 	...MOCK_MEMBER_LIST_MEMBER,
 	name: 'Ada Shelby',
-	last_visited: '2015-12-12T15:15:35.000Z',
-	joined: '2006-06-20T11:07:29.000Z',
+	last_visited: null,
+	joined: null,
 	id: '123456',
 	photo: {
 		id: '124124',
@@ -169,16 +170,37 @@ export const MOCK_MEMBER_LIST_MEMBER_6 = {
 	},
 	role: null,
 	dues: null,
+	status: 'pending',
 };
 
-export const MOCK_MEMBERS_LIST = [
+export const MOCK_MEMBERS_LIST_ALL = [
 	MOCK_MEMBER_LIST_MEMBER,
 	MOCK_MEMBER_LIST_MEMBER_2,
 	MOCK_MEMBER_LIST_MEMBER_3,
 	MOCK_MEMBER_LIST_MEMBER_4,
-	MOCK_MEMBER_LIST_MEMBER_5,
-	MOCK_MEMBER_LIST_MEMBER_6,
 ];
+
+export const MOCK_MEMBERS_LIST_LEADERSHIP = [
+	MOCK_MEMBER_LIST_MEMBER,
+	MOCK_MEMBER_LIST_MEMBER_4,
+];
+
+export const MOCK_MEMBERS_LIST_PENDING = [MOCK_MEMBER_LIST_MEMBER_6];
+
+export const MOCK_MEMBERS_LIST_BANNED = [MOCK_MEMBER_LIST_MEMBER_5];
+
+export function getMockMemberList(selectedFilter) {
+	if (selectedFilter === 'all') {
+		return MOCK_MEMBERS_LIST_ALL;
+	}
+	if (selectedFilter === 'leaders') {
+		return MOCK_MEMBERS_LIST_LEADERSHIP;
+	}
+	if (selectedFilter === 'pending') {
+		return MOCK_MEMBERS_LIST_PENDING;
+	}
+	return MOCK_MEMBERS_LIST_BANNED;
+}
 
 export const MOCK_CHAPTER_MEMBER = {
 	id: 82159492,
