@@ -70,6 +70,80 @@ export const MOCK_GROUP = {
 	timezone: 'Europe/London',
 };
 
+/* Updated shape for members list re-platform */
+export const MOCK_MEMBER_LIST_MEMBER = {
+	name: 'Thomas Shelby',
+	last_visited: '2018-10-12T15:15:35.000Z',
+	joined: '2017-03-20T11:07:29.000Z',
+	id: Math.random(),
+	self: {
+		actions: ['message'],
+	},
+	status: 'active',
+	photo: {
+		id: '255539096',
+		thumb_link:
+			'https://static.spin.com/files/2016/07/cillian-murphy-peaky-blinders-loves-radiohead-interview-640x426.jpg',
+	},
+	role: 'coorganizer',
+	dues: {
+		status: 'paid',
+		paid_end_date: '2020-03-20T11:07:29.000Z',
+	},
+};
+
+export const MOCK_MEMBER_LIST_MEMBER_2 = {
+	...MOCK_MEMBER_LIST_MEMBER,
+	name: 'Arthur Shelby',
+	last_visited: '2017-10-12T15:15:35.000Z',
+	joined: '2016-03-20T11:07:29.000Z',
+	photo: {
+		id: '112442',
+		thumb_link: 'https://ichef.bbci.co.uk/images/ic/480xn/p05mk5c6.jpg',
+	},
+	dues: {
+		status: 'exempt',
+	},
+};
+
+export const MOCK_MEMBER_LIST_MEMBER_3 = {
+	...MOCK_MEMBER_LIST_MEMBER,
+	name: 'John Shelby',
+	last_visited: '2017-12-12T15:15:35.000Z',
+	joined: '2016-06-20T11:07:29.000Z',
+	photo: {
+		id: '112442',
+		thumb_link:
+			'https://vignette.wikia.nocookie.net/peaky-blinders/images/f/f0/John2.jpg/revision/latest?cb=20171102225430',
+	},
+	dues: {
+		status: 'trial',
+		trial_end_date: '2019-03-20T11:07:29.000Z',
+	},
+};
+
+export const MOCK_MEMBER_LIST_MEMBER_4 = {
+	...MOCK_MEMBER_LIST_MEMBER,
+	name: 'Polly Grey',
+	last_visited: '2017-12-12T15:15:35.000Z',
+	joined: '2016-06-20T11:07:29.000Z',
+	photo: {
+		id: '112442',
+		thumb_link: 'https://ichef.bbci.co.uk/images/ic/480xn/p01g4m2n.jpg',
+	},
+	dues: {
+		status: 'unpaid',
+	},
+	role: 'event_organizer',
+};
+
+export const MOCK_MEMBERS_LIST = [
+	MOCK_MEMBER_LIST_MEMBER,
+	MOCK_MEMBER_LIST_MEMBER_2,
+	MOCK_MEMBER_LIST_MEMBER_3,
+	MOCK_MEMBER_LIST_MEMBER_4,
+];
+
 export const MOCK_CHAPTER_MEMBER = {
 	id: 82159492,
 	name: 'Grayson Cheese',
