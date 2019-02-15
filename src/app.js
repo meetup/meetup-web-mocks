@@ -1,5 +1,3 @@
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
 import {
 	MOCK_GROUP,
 	MOCK_EVENT,
@@ -183,14 +181,6 @@ export const MOCK_COOKIE_HEADER = Object.keys(MOCK_OAUTH_COOKIES).reduce(
 	(acc, key) => (acc += `${key}=${JSON.stringify(MOCK_OAUTH_COOKIES[key])}; `),
 	''
 );
-
-// mock the renderRequest$ function provided by the server-locale app bundle
-export const MOCK_RENDER_REQUEST$ = () =>
-	Observable.of({ result: MOCK_RENDER_RESULT, statusCode: 200 });
-
-export const MOCK_renderRequestMap = {
-	'en-US': MOCK_RENDER_REQUEST$,
-};
 
 export const MOCK_REQUEST_COOKIES = {
 	url: '/',
