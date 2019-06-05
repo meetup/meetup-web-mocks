@@ -230,3 +230,66 @@ export const MOCK_ROUTES = [
 		],
 	},
 ];
+
+// default value object used in mock state object
+export const mockValue = { id: '🦄' };
+/**
+ * Useful function when generating fake state objects
+ * @param {String} ref Reference to use in object creation
+ * @param {Object} value value to use in object creation
+ * @return {Object} mock object
+ */
+export const generateMockState = (ref, value = mockValue) => ({
+	config: {},
+	api: {
+		...MOCK_APP_STATE.api,
+		[ref]: {
+			ref,
+			value,
+			meta: {
+				statusCode: 204,
+				flags: { some_flag: true },
+			},
+		},
+	},
+});
+
+/**
+ * Useful function when generating fake state objects with a custom meta object.
+ * @param {String} ref Reference to use in object creation
+ * @param {Object} value value to use in object creation
+ * @param {Object} meta meta values to use in object creation
+ * @return {Object} mock object
+ */
+export const generateMockStateAndMeta = (ref, value = mockValue, meta) => ({
+	config: {},
+	api: {
+		...MOCK_APP_STATE.api,
+		[ref]: {
+			ref,
+			value,
+			meta,
+		},
+	},
+});
+
+/**
+ * Useful testing util when testing selectors to determine if variants
+ * object will be returned for the specified ref
+ * @param {String} ref Reference to use in object creation
+ * @param {Object} variants
+ * @param {Object} value additional api value on the response
+ * @return {Object} mock object
+ */
+export const generateMockVariantMeta = (ref, variants, value) => {
+	const mockState = generateMockState();
+	return {
+		api: {
+			...mockState.api,
+			[ref]: {
+				value,
+				meta: { variants },
+			},
+		},
+	};
+};
