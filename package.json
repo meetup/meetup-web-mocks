@@ -4,7 +4,10 @@
   "license": "UNLICENSED",
   "description": "Meetup Web Mocks",
   "author": "Meetup",
-  "engine": "node >=6.5.0",
+  "engines": {
+    "node": "^10.16.3",
+    "yarn": "^1.9.4"
+  },
   "scripts": {
     "build": "babel src --out-dir lib",
     "lint": "yarn run lint:base -- --fix",
