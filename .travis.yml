@@ -30,13 +30,13 @@ after_script:
   - git config --global user.name "Travis CI"
   - $(yarn bin)/set-up-ssh --key "$encrypted_e09404c5d59a_key" --iv "$encrypted_e09404c5d59a_iv" --path-encrypted-key ".travis/github_deploy_key.enc"
   - >
-    [ "${TRAVIS_BRANCH}" = "master" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ] &&
-    export GIT_TAG=$(make version) ||
-    export GIT_TAG=$(make version)-beta
-  - >
-    [ "${TRAVIS_BRANCH}" = "master" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ] &&
-    export NPM_TAG=latest ||
-    export NPM_TAG=beta
+    if [ ${TRAVIS_BRANCH} = "master" ] && [ ${TRAVIS_PULL_REQUEST} = "false" ]; then
+      export GIT_TAG=$(make version)
+      export NPM_TAG=latest
+    else
+      export GIT_TAG=$(make version)-beta
+      export NPM_TAG=beta
+    fi
   - echo "GIT_TAG=$GIT_TAG"
   - echo "NPM_TAG=$NPM_TAG"
   - >
