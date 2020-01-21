@@ -5,8 +5,8 @@
   "description": "Meetup Web Mocks",
   "author": "Meetup",
   "engines": {
-    "node": "^10.16.3",
-    "yarn": "^1.9.4"
+    "node": "^12.14.1",
+    "yarn": "^1.21.1"
   },
   "scripts": {
     "build": "babel src --out-dir lib",
