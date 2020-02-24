@@ -1,7 +1,7 @@
 {
   "name": "meetup-web-mocks",
   "version": "0.1.0",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "description": "Meetup Web Mocks",
   "author": "Meetup",
   "engines": {
@@ -14,6 +14,10 @@
     "lint:base": "eslint . --ext .js, .jsx",
     "modules:clean": "rm -rf node_modules",
     "test": "yarn run lint:base"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "repository": {
     "type": "git",
