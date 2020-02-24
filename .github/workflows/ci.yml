@@ -30,6 +30,11 @@ jobs:
         run: |
           yarn install --frozen-lockfile
           yarn run build
+      - name: Prep to publish
+        run: npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+        env:
+          CI: true
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Release beta
         if: github.event_name == 'pull_request'
         run: |
