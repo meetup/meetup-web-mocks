@@ -15,6 +15,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
+          registry-url: https://registry.npmjs.org/
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -29,3 +30,14 @@ jobs:
         run: |
           yarn install --frozen-lockfile
           yarn run build
+      - name: Release beta
+        if: github.event_name == 'pull_request'
+        run: |
+          export GIT_TAG=$(make version)-beta
+          export NPM_TAG=beta
+          yarn run build
+          npm version $GIT_TAG -m "Version $GIT_TAG built by Github action"
+          npm publish --tag $NPM_TAG
+        env:
+          CI_BUILD_NUMBER: ${{ github.run_number }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
