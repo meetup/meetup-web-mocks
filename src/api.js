@@ -10,14 +10,6 @@ export const MOCK_MEMBER = {
 export const MOCK_SELF = { ...MOCK_MEMBER, ...{ lang: 'en_US' } };
 export const MOCK_SELF_FR = { ...MOCK_MEMBER, ...{ lang: 'fr_FR' } };
 
-export const MOCK_DUOTONES = [['a', 'b']];
-export const MOCK_DUOTONE_URLS = {
-	dtaxb: {
-		small: 'http://a.b',
-		large: 'http://a.b',
-	},
-};
-
 export const MOCK_GROUP = {
 	id: 1234,
 	urlname: 'fake-hq-faff',
@@ -54,11 +46,6 @@ export const MOCK_GROUP = {
 	link: 'http://example.com/fake-hq-faff',
 	who: 'Faffers',
 	members: 999,
-	photo_gradient: {
-		light_color: MOCK_DUOTONES[0][1],
-		dark_color: MOCK_DUOTONES[0][0],
-	},
-	duotoneUrl: MOCK_DUOTONE_URLS.dtaxb,
 	event_sample: [
 		{
 			id: 1234,
@@ -506,9 +493,7 @@ export const MOCK_SHALLOW_GROUP = {
 	members: MOCK_GROUP.members,
 	organizer: MOCK_GROUP.organizer,
 	link: MOCK_GROUP.link,
-	duotoneUrl: MOCK_GROUP.duotoneUrl,
 	group_photo: MOCK_GROUP.group_photo,
-	photo_gradient: MOCK_GROUP.photo_gradient,
 	plain_text_description: MOCK_GROUP.plain_text_description,
 	who: MOCK_GROUP.who,
 	timezone: MOCK_GROUP.timezone,
